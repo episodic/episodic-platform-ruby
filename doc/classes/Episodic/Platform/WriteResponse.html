@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: Episodic::Platform::WriteResponse [Episodic Platform GEM documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          Episodic::Platform::WriteResponse
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../files/lib/episodic/platform/write_methods_rb.html">lib/episodic/platform/write_methods.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a href="Response.html">Episodic::Platform::Response</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            All write methods have a similar response structure. This class extends
+            <tt>Episodic::Platform::Response</tt> and adds a method to get the id of
+            the created/updated object (&#8216;playlist_id&#8217;,
+            &#8216;episode_id&#8217;, etc).
+            </p>
+          </div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public class</h3>
+            <ol>
+              <li><a href="#M000024">new</a></li>
+            </ol>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000025">method_missing</a></li>
+              <li><a href="#M000026">respond_to?</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public class methods</h2>
+              <div class='method public-class' id='method-M000024'>
+                <a name='M000024'></a>
+                <div class='synopsis'>
+                  <span class='name'>new</span>
+                  <span class='arguments'>(response, xml_options = {&quot;ForceArray&quot; =&gt; false})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Constructor
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">response<Episodic::Platform::HTTPResponse>:</td><td>The response object returned from an Episodic <a
+                  href="../Platform.html">Platform</a> API request.
+                  
+                  </td></tr>
+                  <tr><td valign="top">xml_options<Hash>:</td><td>A set of options used by XmlSimple when parsing the response body
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000024-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000024-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 344</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span> <span class="ruby-identifier">response</span>, <span class="ruby-identifier">xml_options</span> = {<span class="ruby-value str">&quot;ForceArray&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>}&#x000A;        <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">response</span>, <span class="ruby-identifier">xml_options</span>)&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <h2>Public instance methods</h2>
+              <div class='method public-instance' id='method-M000025'>
+                <a name='M000025'></a>
+                <div class='synopsis'>
+                  <span class='name'>method_missing</span>
+                  <span class='arguments'>(method_sym, *arguments, &amp;block)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Override to just check for the value in the attributes
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000025-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000025-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 351</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">method_sym</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">arguments</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)&#x000A;        <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@parsed_body</span>[<span class="ruby-identifier">method_sym</span>.<span class="ruby-identifier">to_s</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-M000026'>
+                <a name='M000026'></a>
+                <div class='synopsis'>
+                  <span class='name'>respond_to?</span>
+                  <span class='arguments'>(symbol, include_private = false)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Always return true.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000026-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000026-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 358</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">symbol</span>, <span class="ruby-identifier">include_private</span> = <span class="ruby-keyword kw">false</span>)&#x000A;        <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

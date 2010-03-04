@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: Episodic::Platform::AnalyticsMethods [Episodic Platform GEM documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          Episodic::Platform::AnalyticsMethods
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../files/lib/episodic/platform/analytics_methods_rb.html">lib/episodic/platform/analytics_methods.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a href="Base.html">Episodic::Platform::Base</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            Class for making requests against the Episodic <a
+            href="../Platform.html">Platform</a> Analytics API.
+            </p>
+          </div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public class</h3>
+            <ol>
+              <li><a href="#M000022">campaigns_daily_report</a></li>
+              <li><a href="#M000021">episode_daily_report</a></li>
+              <li><a href="#M000020">episodes_summary_report</a></li>
+              <li><a href="#M000019">get_report</a></li>
+            </ol>
+            <h3>protected class</h3>
+            <ol>
+              <li><a href="#M000023">parse_token_response</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public class methods</h2>
+              <div class='method public-class' id='method-M000022'>
+                <a name='M000022'></a>
+                <div class='synopsis'>
+                  <span class='name'>campaigns_daily_report</span>
+                  <span class='arguments'>(show_id, date_range, format)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Generates a report for all campaigns in a specific show. The report will
+                  contain information such as the total views, complete views, downloads,
+                  click throughs, etc for each campaign in the show.
+                  </p>
+                  <p>
+                  It is important to note that this method just generates the report and
+                  returns a token that can be used to get the report by calling <tt><a
+                  href="AnalyticsMethods.html#M000019">Episodic::Platform::AnalyticsMethods.get_report</a></tt>.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">show_id<String>:</td><td>The id of the show that contains your campaigns. To get a list of your
+                  
+                  </td></tr>
+                  </table>
+                  <pre>shows see &lt;tt&gt;Episodic::Platform::QueryMethods.show&lt;/tt&gt;.</pre>
+                  <table>
+                  <tr><td valign="top">date_range<String>:</td><td>Specifies period of your report. The value of this parameter must be one
+                  
+                  </td></tr>
+                  </table>
+                  <pre>of 'today', 'last_seven', 'last_thirty'.</pre>
+                  <table>
+                  <tr><td valign="top">format<String>:</td><td>The format parameter is required and must be one of &#8216;csv&#8217; or
+                  &#8216;xml&#8217;.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::TokenResponse:</td><td>This response object includes a token that can be used to
+                  
+                  </td></tr>
+                  </table>
+                  <pre>actually get the report by calling &lt;tt&gt;Episodic::Platform::AnalyticsMethods.get_report&lt;/tt&gt;.</pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000022-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000022-source'><span class="ruby-comment cmt"># File lib/episodic/platform/analytics_methods.rb, line 127</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">campaigns_daily_report</span> <span class="ruby-identifier">show_id</span>, <span class="ruby-identifier">date_range</span>, <span class="ruby-identifier">format</span>&#x000A;          &#x000A;          <span class="ruby-identifier">params</span> = {&#x000A;            <span class="ruby-identifier">:show_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">show_id</span>,&#x000A;            <span class="ruby-identifier">:date_range</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">date_range</span>,&#x000A;            <span class="ruby-identifier">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">format</span>&#x000A;          }&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_get</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;analytics&quot;</span>, <span class="ruby-value str">&quot;request_campaigns_daily_report&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Convert to a hash</span>&#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">parse_token_response</span>(<span class="ruby-identifier">response</span>)&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000021'>
+                <a name='M000021'></a>
+                <div class='synopsis'>
+                  <span class='name'>episode_daily_report</span>
+                  <span class='arguments'>(show_id, episode_id, date_range, format)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Generates a report for a specific episode in a show. The report will
+                  contain information such as the total views, complete views, downloads, etc
+                  for each episode in the show.
+                  </p>
+                  <p>
+                  It is important to note that this method just generates the report and
+                  returns a token that can be used to get the report by calling <tt><a
+                  href="AnalyticsMethods.html#M000019">Episodic::Platform::AnalyticsMethods.get_report</a></tt>.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">show_id<String>:</td><td>The id of the show that contains your episodes. To get a list of your
+                  
+                  </td></tr>
+                  </table>
+                  <pre>shows see &lt;tt&gt;Episodic::Platform::QueryMethods.show&lt;/tt&gt;.</pre>
+                  <table>
+                  <tr><td valign="top">episode_id<String>:</td><td>The id of the episodes to generate the report for. To get a list of your
+                  
+                  </td></tr>
+                  </table>
+                  <pre>episodes see &lt;tt&gt;Episodic::Platform::QueryMethods.episodes&lt;/tt&gt;.</pre>
+                  <table>
+                  <tr><td valign="top">date_range<String>:</td><td>Specifies period of your report. The value of this parameter must be one
+                  
+                  </td></tr>
+                  </table>
+                  <pre>of 'today', 'last_seven', 'last_thirty'.</pre>
+                  <table>
+                  <tr><td valign="top">format<String>:</td><td>The format parameter is required and must be one of &#8216;csv&#8217; or
+                  &#8216;xml&#8217;.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::TokenResponse:</td><td>This response object includes a token that can be used to
+                  
+                  </td></tr>
+                  </table>
+                  <pre>actually get the report by calling &lt;tt&gt;Episodic::Platform::AnalyticsMethods.get_report&lt;/tt&gt;.</pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000021-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000021-source'><span class="ruby-comment cmt"># File lib/episodic/platform/analytics_methods.rb, line 92</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">episode_daily_report</span> <span class="ruby-identifier">show_id</span>, <span class="ruby-identifier">episode_id</span>, <span class="ruby-identifier">date_range</span>, <span class="ruby-identifier">format</span>&#x000A;          &#x000A;          <span class="ruby-identifier">params</span> = {&#x000A;            <span class="ruby-identifier">:show_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">show_id</span>,&#x000A;            <span class="ruby-identifier">:date_range</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">date_range</span>,&#x000A;            <span class="ruby-identifier">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">episode_id</span>,&#x000A;            <span class="ruby-identifier">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">format</span>&#x000A;          }&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_get</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;analytics&quot;</span>, <span class="ruby-value str">&quot;request_episode_daily_report&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Convert to a hash</span>&#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">parse_token_response</span>(<span class="ruby-identifier">response</span>)&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000020'>
+                <a name='M000020'></a>
+                <div class='synopsis'>
+                  <span class='name'>episodes_summary_report</span>
+                  <span class='arguments'>(show_id, date_range, date_grouping, format)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Generates a report for all episodes in a show. The report will contain
+                  information such as the total views, complete views, downloads, etc for
+                  each episode in the show.
+                  </p>
+                  <p>
+                  It is important to note that this method just generates the report and
+                  returns a token that can be used to get the report by calling <tt><a
+                  href="AnalyticsMethods.html#M000019">Episodic::Platform::AnalyticsMethods.get_report</a></tt>.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">show_id<String>:</td><td>The id of the show that contains your episodes. To get a list of your
+                  
+                  </td></tr>
+                  </table>
+                  <pre>shows see &lt;tt&gt;Episodic::Platform::QueryMethods.show&lt;/tt&gt;.</pre>
+                  <table>
+                  <tr><td valign="top">date_range<String>:</td><td>Specifies period of your report. The value of this parameter must be one
+                  
+                  </td></tr>
+                  </table>
+                  <pre>of 'today', 'last_seven', 'last_thirty'.</pre>
+                  <table>
+                  <tr><td valign="top">date_grouping<String>:</td><td>Must be one of &#8216;daily&#8217; or &#8216;aggregate&#8217; to list the
+                  data by day or just a total
+                  
+                  </td></tr>
+                  </table>
+                  <pre>for the entire period respectively.</pre>
+                  <table>
+                  <tr><td valign="top">format<String>:</td><td>The format parameter is required and must be one of &#8216;csv&#8217; or
+                  &#8216;xml&#8217;.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::TokenResponse:</td><td>This response object includes a token that can be used to
+                  
+                  </td></tr>
+                  </table>
+                  <pre>actually get the report by calling &lt;tt&gt;Episodic::Platform::AnalyticsMethods.get_report&lt;/tt&gt;.</pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000020-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000020-source'><span class="ruby-comment cmt"># File lib/episodic/platform/analytics_methods.rb, line 55</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">episodes_summary_report</span> <span class="ruby-identifier">show_id</span>, <span class="ruby-identifier">date_range</span>, <span class="ruby-identifier">date_grouping</span>, <span class="ruby-identifier">format</span>&#x000A;          &#x000A;          <span class="ruby-identifier">params</span> = {&#x000A;            <span class="ruby-identifier">:show_id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">show_id</span>,&#x000A;            <span class="ruby-identifier">:date_range</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">date_range</span>,&#x000A;            <span class="ruby-identifier">:date_grouping</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">date_grouping</span>,&#x000A;            <span class="ruby-identifier">:format</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">format</span>&#x000A;          }&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_get</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;analytics&quot;</span>, <span class="ruby-value str">&quot;request_episodes_summary_report&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Convert to a hash</span>&#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">parse_token_response</span>(<span class="ruby-identifier">response</span>)&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000019'>
+                <a name='M000019'></a>
+                <div class='synopsis'>
+                  <span class='name'>get_report</span>
+                  <span class='arguments'>(token)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Fetches a previously generated report.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">report_token<String>:</td><td>This is the value returned from one of the report generation methods.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">String:</td><td>The contents of the report.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000019-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000019-source'><span class="ruby-comment cmt"># File lib/episodic/platform/analytics_methods.rb, line 23</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_report</span> <span class="ruby-identifier">token</span>&#x000A;          <span class="ruby-identifier">params</span> = {&#x000A;            <span class="ruby-identifier">:report_token</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">token</span>,&#x000A;          }&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_get</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;analytics&quot;</span>, <span class="ruby-value str">&quot;get_report&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <h2>Protected class methods</h2>
+              <div class='method protected-class' id='method-M000023'>
+                <a name='M000023'></a>
+                <div class='synopsis'>
+                  <span class='name'>parse_token_response</span>
+                  <span class='arguments'>(response)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Method factored out to make unit testing easier. This method simply creates
+                  the <tt>::Episodic::Platform::TokenResponse</tt> object.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">response<Episodic::Platform::HTTPResponse>:</td><td>The response from any token request
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">::Episodic::Platform::TokenResponse:</td><td>The parsed response.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000023-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000023-source'><span class="ruby-comment cmt"># File lib/episodic/platform/analytics_methods.rb, line 155</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_token_response</span> <span class="ruby-identifier">response</span>&#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">TokenResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

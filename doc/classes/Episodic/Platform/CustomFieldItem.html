@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: Episodic::Platform::CustomFieldItem [Episodic Platform GEM documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          Episodic::Platform::CustomFieldItem
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../files/lib/episodic/platform/query_methods_rb.html">lib/episodic/platform/query_methods.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a href="Item.html">Episodic::Platform::Item</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            Represents a custom field element returned from an episodes or playlists
+            request.
+            </p>
+          </div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public instance</h3>
+            <ol>
+              <li><a href="#M000061">boolean_fields</a></li>
+              <li><a href="#M000060">integer_fields</a></li>
+              <li><a href="#M000059">type</a></li>
+              <li><a href="#M000058">values</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public instance methods</h2>
+              <div class='method public-instance' id='method-M000061'>
+                <a name='M000061'></a>
+                <div class='synopsis'>
+                  <span class='name'>boolean_fields</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Provides a list of fields that are actually dates.
+                  </p>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Array:</td><td>A list of field names as symbols.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000061-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000061-source'><span class="ruby-comment cmt"># File lib/episodic/platform/query_methods.rb, line 715</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">boolean_fields</span>&#x000A;        <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">:required</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-M000060'>
+                <a name='M000060'></a>
+                <div class='synopsis'>
+                  <span class='name'>integer_fields</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Provides a list of fields that are actually integers.
+                  </p>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Array:</td><td>A list of field names as symbols.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000060-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000060-source'><span class="ruby-comment cmt"># File lib/episodic/platform/query_methods.rb, line 704</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">integer_fields</span>&#x000A;        <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">:position</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-M000059'>
+                <a name='M000059'></a>
+                <div class='synopsis'>
+                  <span class='name'>type</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Explicitly declare to avoid <tt>warning: Object#type is deprecated; use
+                  Object#class</tt>.
+                  </p>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000059-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000059-source'><span class="ruby-comment cmt"># File lib/episodic/platform/query_methods.rb, line 693</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">type</span>&#x000A;        <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@item</span>[<span class="ruby-value str">&quot;type&quot;</span>]&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-instance' id='method-M000058'>
+                <a name='M000058'></a>
+                <div class='synopsis'>
+                  <span class='name'>values</span>
+                  <span class='arguments'>()</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Get the values for this field. Values are always returned as strings except
+                  when the type is <tt>external_select</tt> then it is an array or two
+                  element arrays with the external id and external value respectively.
+                  </p>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Array:</td><td>In most cases this will be a single element array.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000058-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000058-source'><span class="ruby-comment cmt"># File lib/episodic/platform/query_methods.rb, line 670</span>&#x000A;      <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">values</span>&#x000A;        &#x000A;        <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@values</span>.<span class="ruby-identifier">nil?</span>)&#x000A;          <span class="ruby-ivar">@values</span> = []&#x000A;          <span class="ruby-identifier">_values</span> = <span class="ruby-ivar">@item</span>[<span class="ruby-value str">&quot;value&quot;</span>]  &#x000A;          <span class="ruby-keyword kw">unless</span> (<span class="ruby-identifier">_values</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>))&#x000A;            <span class="ruby-identifier">_values</span> = [<span class="ruby-identifier">_values</span>]&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-identifier">_values</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span>&#x000A;            <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">v</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>))&#x000A;              <span class="ruby-ivar">@values</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">v</span>[<span class="ruby-value str">&quot;id&quot;</span>].<span class="ruby-identifier">strip</span>, <span class="ruby-identifier">v</span>[<span class="ruby-value str">&quot;content&quot;</span>].<span class="ruby-identifier">strip</span>]&#x000A;            <span class="ruby-keyword kw">else</span>&#x000A;              <span class="ruby-ivar">@values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">strip</span>&#x000A;            <span class="ruby-keyword kw">end</span>&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;        <span class="ruby-keyword kw">end</span>&#x000A;        &#x000A;        <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@values</span>&#x000A;      <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: Episodic::Platform [Episodic Platform GEM documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Module</span>
+          Episodic::Platform
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../files/lib/episodic/platform/analytics_methods_rb.html">lib/episodic/platform/analytics_methods.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/base_rb.html">lib/episodic/platform/base.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/collection_response_rb.html">lib/episodic/platform/collection_response.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/connection_rb.html">lib/episodic/platform/connection.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/exceptions_rb.html">lib/episodic/platform/exceptions.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/query_methods_rb.html">lib/episodic/platform/query_methods.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/response_rb.html">lib/episodic/platform/response.rb</a>
+          </li>
+          <li class='other'>
+            <a href="../../files/lib/episodic/platform/write_methods_rb.html">lib/episodic/platform/write_methods.rb</a>
+          </li>
+          <li>
+            <a class='show' href='#' onclick='this.parentNode.parentNode.className += " expanded"; this.parentNode.removeChild(this); return false'>show all</a>
+          </li>
+        </ol>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            <a href="Platform.html">Episodic::Platform</a> is a Ruby library for
+            Episodic&#8217;s <a href="Platform.html">Platform</a> REST API (<a
+            href="http://app.episodic.com/help/server_api">app.episodic.com/help/server_api</a>)
+            </p>
+            <h2>Getting started</h2>
+            <p>
+            To get started you need to require &#8216;episodic/platform&#8217;:
+            </p>
+            <pre>require 'episodic/platform'</pre>
+            <p>
+            Before you can use any of the object methods, you need to create a
+            connection using <tt>Base.establish_connection!</tt>. The
+            <tt>Base.establish_connection!</tt> method requires that you pass your
+            Episodic API Key and Episodic Secret Key.
+            </p>
+            <pre>Episodic::Platform::Base.establish_connection!('my_api_key', 'my_secret_key')</pre>
+            <h2>Handling errors</h2>
+            <p>
+            Any errors returned from the Episodic <a href="Platform.html">Platform</a>
+            API are converted to exceptions and raised from the called method. For
+            example, the following response would cause
+            <tt>Episodic::Platform::InvalidAPIKey</tt> to be raised.
+            </p>
+            <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x000A;&lt;error&gt;&#x000A;  &lt;code&gt;1&lt;/code&gt;&#x000A;  &lt;message&gt;Invalid API Key&lt;/message&gt;&#x000A;&lt;/error&gt;</pre>
+          </div>
+          <div id='section'>
+            <div id='class-list'>
+              <h2>Classes and Modules</h2>
+              Class <a href="Platform/APIAccessDisabled.html" class="link">Episodic::Platform::APIAccessDisabled</a><br />
+              Class <a href="Platform/AnalyticsMethods.html" class="link">Episodic::Platform::AnalyticsMethods</a><br />
+              Class <a href="Platform/Base.html" class="link">Episodic::Platform::Base</a><br />
+              Class <a href="Platform/CollectionResponse.html" class="link">Episodic::Platform::CollectionResponse</a><br />
+              Class <a href="Platform/Connection.html" class="link">Episodic::Platform::Connection</a><br />
+              Class <a href="Platform/CreateUpdateEpisodeResponse.html" class="link">Episodic::Platform::CreateUpdateEpisodeResponse</a><br />
+              Class <a href="Platform/CustomFieldItem.html" class="link">Episodic::Platform::CustomFieldItem</a><br />
+              Class <a href="Platform/DownloadItem.html" class="link">Episodic::Platform::DownloadItem</a><br />
+              Class <a href="Platform/EpisodeItem.html" class="link">Episodic::Platform::EpisodeItem</a><br />
+              Class <a href="Platform/EpisodePlaylistItem.html" class="link">Episodic::Platform::EpisodePlaylistItem</a><br />
+              Class <a href="Platform/EpisodesResponse.html" class="link">Episodic::Platform::EpisodesResponse</a><br />
+              Class <a href="Platform/EpisodicPlatformException.html" class="link">Episodic::Platform::EpisodicPlatformException</a><br />
+              Class <a href="Platform/FileUploadFailed.html" class="link">Episodic::Platform::FileUploadFailed</a><br />
+              Class <a href="Platform/HTTPResponse.html" class="link">Episodic::Platform::HTTPResponse</a><br />
+              Class <a href="Platform/InternalError.html" class="link">Episodic::Platform::InternalError</a><br />
+              Class <a href="Platform/InvalidAPIKey.html" class="link">Episodic::Platform::InvalidAPIKey</a><br />
+              Class <a href="Platform/InvalidParameters.html" class="link">Episodic::Platform::InvalidParameters</a><br />
+              Class <a href="Platform/Item.html" class="link">Episodic::Platform::Item</a><br />
+              Class <a href="Platform/MissingRequiredParameter.html" class="link">Episodic::Platform::MissingRequiredParameter</a><br />
+              Class <a href="Platform/NotFound.html" class="link">Episodic::Platform::NotFound</a><br />
+              Class <a href="Platform/PlayerItem.html" class="link">Episodic::Platform::PlayerItem</a><br />
+              Class <a href="Platform/PlaylistEpisodeItem.html" class="link">Episodic::Platform::PlaylistEpisodeItem</a><br />
+              Class <a href="Platform/PlaylistItem.html" class="link">Episodic::Platform::PlaylistItem</a><br />
+              Class <a href="Platform/PlaylistsResponse.html" class="link">Episodic::Platform::PlaylistsResponse</a><br />
+              Class <a href="Platform/QueryMethods.html" class="link">Episodic::Platform::QueryMethods</a><br />
+              Class <a href="Platform/ReportNotFound.html" class="link">Episodic::Platform::ReportNotFound</a><br />
+              Class <a href="Platform/RequestExpired.html" class="link">Episodic::Platform::RequestExpired</a><br />
+              Class <a href="Platform/Response.html" class="link">Episodic::Platform::Response</a><br />
+              Class <a href="Platform/ResponseError.html" class="link">Episodic::Platform::ResponseError</a><br />
+              Class <a href="Platform/ShowItem.html" class="link">Episodic::Platform::ShowItem</a><br />
+              Class <a href="Platform/ShowsResponse.html" class="link">Episodic::Platform::ShowsResponse</a><br />
+              Class <a href="Platform/ThumbnailItem.html" class="link">Episodic::Platform::ThumbnailItem</a><br />
+              Class <a href="Platform/TokenResponse.html" class="link">Episodic::Platform::TokenResponse</a><br />
+              Class <a href="Platform/Upload.html" class="link">Episodic::Platform::Upload</a><br />
+              Class <a href="Platform/WriteMethods.html" class="link">Episodic::Platform::WriteMethods</a><br />
+              Class <a href="Platform/WriteResponse.html" class="link">Episodic::Platform::WriteResponse</a><br />
+            </div>
+            <div id='constants-list'>
+              <h2>Constants</h2>
+              <div class='name-list'>
+                <table summary='Constants'>
+                  <tr class='top-aligned-row context-row'>
+                    <td class='context-item-name'>API_HOST</td>
+                    <td>=</td>
+                    <td class='context-item-value'>'app.episodic.com'</td>
+                  </tr>
+                  <tr class='top-aligned-row context-row'>
+                    <td class='context-item-name'>API_VERSION</td>
+                    <td>=</td>
+                    <td class='context-item-value'>'v2'</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

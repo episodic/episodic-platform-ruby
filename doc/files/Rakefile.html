@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>File: Rakefile [Episodic Platform GEM documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='file' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>Rakefile</h1>
+        <div class='paths'>
+          Rakefile
+        </div>
+        <div class='last-update'>
+          Last Update:
+          <span class='datetime'>Wed Mar 03 17:02:48 -0800 2010</span>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            require &#8216;rubygems&#8217; gem &#8216;hoe&#8217;, &#8217;>=
+            2.1.0&#8217; require &#8216;hoe&#8217; require &#8216;fileutils&#8217;
+            require &#8217;./lib/episodic/platform&#8216;
+            </p>
+            <p>
+            Hoe.plugin :newgem # Hoe.plugin :website # Hoe.plugin :cucumberfeatures
+            </p>
+            <p>
+            # Generate all the Rake tasks # Run &#8216;rake -T&#8217; to see list of
+            generated tasks (from gem root directory) $hoe = Hoe.spec
+            &#8216;episodic-platform&#8217; do
+            </p>
+            <pre>self.developer 'Randy Simon', 'support@episodic.com'&#x000A;self.post_install_message = 'PostInstall.txt' # TODO remove if post-install message not required&#x000A;self.rubyforge_name       = self.name # TODO this is default value&#x000A;self.version              = '0.9'</pre>
+            <p>
+            end
+            </p>
+            <p>
+            require &#8216;newgem/tasks&#8217; <a
+            href="http://'tasks/*/.rake'">Dir</a>.each { |t| load t }
+            </p>
+            <p>
+            gem &#8216;rdoc&#8217; gem &#8216;hanna&#8217; require
+            &#8216;rake/rdoctask&#8217; require &#8216;hanna/rdoctask&#8216;
+            </p>
+            <p>
+            desc &#8216;Generate RDoc documentation&#8217; Rake::RDocTask.new(:rdoc) do
+            |rdoc| # rdoc.rdoc_files.include(&#8216;<a
+            href="README_rdoc.html">README.rdoc</a>&#8217;, &#8216;LICENSE&#8217;,
+            &#8216;CHANGELOG&#8217;). # include(&#8216;lib/*<b>/</b>.rb&#8217;). ##
+            exclude(&#8216;lib/will_paginate/named_scope*&#8217;).
+            </p>
+            <pre>rdoc.main = &quot;README.rdoc&quot; # page to start on&#x000A;rdoc.title = &quot;Episodic Platform GEM documentation&quot;&#x000A;&#x000A;rdoc.rdoc_dir = 'doc' # rdoc output folder</pre>
+            <p>
+            # rdoc.options << &#8217;&#8212;webcvs=<a
+            href="http://github.com/mislav/will_paginate/tree/master/">github.com/mislav/will_paginate/tree/master/</a>&#8217;
+            end
+            </p>
+            <p>
+            # TODO - want other tests/tasks run by default? Add them to the list #
+            remove_task :default # task :default => [:spec, :features]
+            </p>
+          </div>
+          <div id='section'>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>

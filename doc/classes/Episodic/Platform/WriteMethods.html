@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+  <head>
+    <title>: Episodic::Platform::WriteMethods [Episodic Platform GEM documentation]</title>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+    <link href='../../../rdoc-style.css' media='screen' rel='stylesheet' type='text/css'>
+    <script type='text/javascript'>
+      //<![CDATA[
+        function popupCode(url) {
+          window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+        }
+        
+        function toggleCode(id) {
+          var code = document.getElementById(id)
+        
+          code.style.display = code.style.display != 'block' ? 'block' : 'none'
+          return true
+        }
+        
+        // Make codeblocks hidden by default
+        document.writeln('<' + 'style type="text/css">.method .source pre { display: none }<\/style>')
+      //]]>
+    </script>
+  </head>
+  <body class='page'>
+    <div class='class' id='wrapper'>
+      <div class='header'>
+        <h1 class='name'>
+          <span class='type'>Class</span>
+          Episodic::Platform::WriteMethods
+        </h1>
+        <ol class='paths'>
+          <li>
+            <a href="../../../files/lib/episodic/platform/write_methods_rb.html">lib/episodic/platform/write_methods.rb</a>
+          </li>
+        </ol>
+        <div class='parent'>
+          Parent:
+          <strong><a href="Base.html">Episodic::Platform::Base</a></strong>
+        </div>
+      </div>
+      <div id='content'>
+        <div id='text'>
+          <div id='description'>
+            <p>
+            Class for making requests against the Episodic <a
+            href="../Platform.html">Platform</a> Write API.
+            </p>
+          </div>
+          <div id='method-list'>
+            <h2>Methods</h2>
+            <h3>public class</h3>
+            <ol>
+              <li><a href="#M000009">create_asset</a></li>
+              <li><a href="#M000010">create_episode</a></li>
+              <li><a href="#M000011">create_playlist</a></li>
+              <li><a href="#M000012">update_episode</a></li>
+              <li><a href="#M000013">update_playlist</a></li>
+              <li><a href="#M000014">upload_file_for_episode</a></li>
+            </ol>
+            <h3>protected class</h3>
+            <ol>
+              <li><a href="#M000015">parse_create_response</a></li>
+            </ol>
+          </div>
+          <div id='section'>
+            <div id='methods'>
+              <h2>Public class methods</h2>
+              <div class='method public-class' id='method-M000009'>
+                <a name='M000009'></a>
+                <div class='synopsis'>
+                  <span class='name'>create_asset</span>
+                  <span class='arguments'>(show_id, name, filename)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  The Create Asset method is used to upload a new video or image asset for
+                  use in one of your shows.
+                  </p>
+                  <p>
+                  NOTE: This method of uploading has been deprecated. The preferred method is
+                  to call <tt>Episodic::Platform::<a
+                  href="WriteMethods.html#M000010">create_episode</a></tt> or
+                  <tt>Episodic::Platform::<a
+                  href="WriteMethods.html#M000012">update_episode</a></tt> with
+                  <tt>upload_types</tt> specified.
+                  </p>
+                  <p>
+                  You may still use this method but we will limit your usage to 5 assets a
+                  day.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">show_id<String>:</td><td>The ID of the show to create the asset in.
+                  
+                  </td></tr>
+                  <tr><td valign="top">name<String>:</td><td>The name of the new asset. This value must be less than 255 characters.
+                  
+                  </td></tr>
+                  <tr><td valign="top">filename<String>:</td><td>The full path to the file on the file system. This is the image or video.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::WriteResponse:</td><td>The parsed response.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000009-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000009-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 31</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_asset</span> <span class="ruby-identifier">show_id</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">filename</span>&#x000A;          <span class="ruby-identifier">params</span> = {}&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Add the required fields</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:show_id</span>] = <span class="ruby-identifier">show_id</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:name</span>] = <span class="ruby-identifier">name</span>&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_post</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;write&quot;</span>, <span class="ruby-value str">&quot;create_asset&quot;</span>), <span class="ruby-identifier">params</span>, {<span class="ruby-value str">&quot;uploaded_data&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filename</span>})&#x000A;          &#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)         &#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000010'>
+                <a name='M000010'></a>
+                <div class='synopsis'>
+                  <span class='name'>create_episode</span>
+                  <span class='arguments'>(show_id, name, options = {})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Creates an episode in the Episodic System in the specified show. This
+                  method will return the information needed to upload the video file for this
+                  episode. If you are adding a file to the episode then the <tt><a
+                  href="WriteMethods.html#M000014">upload_file_for_episode</a></tt> must be
+                  called immediately after this method. For example,
+                  </p>
+                  <pre>::Episodic::Platform::WriteMethods.create_episode(&quot;oz04s1q0i29t&quot;, &quot;My Episode&quot;, {:upload_types =&gt; &quot;s3&quot;, :video_filename =&gt; &quot;1-0.mp4&quot;})&#x000A;::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath(&quot;/path/to/file/1-0.mp4&quot;))</pre>
+                  <p>
+                  The last parameter to this method is a list of optional attributes.
+                  Acceptable options are:
+                  </p>
+                  <pre>air_date - Setting this date in the future will tell the Episodic Platform to publish&#x000A;    the episode but not make it available in playlists until this date has passed.&#x000A;    This defaults to now if not provided.&#x000A;custom_fields- If you have set up custom metadata fields on the show that you are&#x000A;    creating the episode in you can also assign values to those fields by passing&#x000A;    in a Hash of name/value pairs where the name is the name of your custom field.&#x000A;    In the case that the field you are trying to set is a external select field then&#x000A;    the value should be a Hash mapping ids to display values.&#x000A;description - A string value to be used as the description for the episode.&#x000A;    Descriptions must be less than 255 characters&#x000A;off_air_date - When this date is reached the episode will be removed from all&#x000A;    playlists. This defaults to indefinite if not provided.&#x000A;publish - This must either &lt;tt&gt;true&lt;/tt&gt; or &lt;tt&gt;false&lt;/tt&gt; to indicate whether the&#x000A;    episode should be submitted for publishing.  The default is &lt;tt&gt;false&lt;/tt&gt;.&#x000A;publish_format_ids - Publishing resolutions and bitrates defaults are set on the&#x000A;    containing show but can be overridden on the episode.  If you wish to override the&#x000A;    defaults, this value should be an Array of publishing profile ids.&#x000A;tags - A comma delimitted list of tags for the new episode.&#x000A;upload_types - This is only used when there is a 'video_filename' and/or 'thumbnail_filename' included.&#x000A;    The caller may pass in a single value or a comma delimited list.  However, it is important to note that your&#x000A;    network must support the one of specified upload types or the call will fail.  Currently, the only valid value&#x000A;    is 's3'.&#x000A;asset_ids - The list of assets in the order they are to appear in the episode.  Ingored if the upload_types and&#x000A;    asset_filename parameters are not blank.&#x000A;thumbnail_id - The id of the thumbnail to set on the episode.  Ignored if the upload_types and thumbnail_filename parameters&#x000A;    are not blank.&#x000A;video_filename - If an upload_type is specified this is the name of the file that will be uploaded and made the single video for&#x000A;    the episode.&#x000A;thumbnail_filename - If an upload_type is specified this is the name of the file that will be uploaded and made the thumbnail&#x000A;    for the episode.&#x000A;ping_url - The URL the Episodic system will issue a GET request against to notify you&#x000A;    that publishing has completed.  The ping URL should accept two parameters: the&#x000A;    episode id and a status which will be one of 'success' or 'failure'.</pre>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">show_id<String>:</td><td>The ID of the show to create the episode in.
+                  
+                  </td></tr>
+                  <tr><td valign="top">name<String>:</td><td>The name of the episode. This must be unique across your show.
+                  
+                  </td></tr>
+                  <tr><td valign="top">options<Hash>:</td><td>A hash of optional attributes.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::CreateUpdateEpisodeResponse:</td><td>An object that contains the XML response as well as some
+                  
+                  </td></tr>
+                  </table>
+                  <pre>helper methods including &lt;tt&gt;upload_for_filepath&lt;/tt&gt; to be used when calling&#x000A;&lt;tt&gt;Episodic::Platform::WriteMethods.upload_file_for_episode&lt;/tt&gt;.</pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000010-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000010-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 100</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_episode</span>(<span class="ruby-identifier">show_id</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {})&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Clone the options into our params hash</span>&#x000A;          <span class="ruby-identifier">params</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Add the required fields</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:show_id</span>] = <span class="ruby-identifier">show_id</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:name</span>] = <span class="ruby-identifier">name</span>&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_post</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;write&quot;</span>, <span class="ruby-value str">&quot;create_episode&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateUpdateEpisodeResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)&#x000A;          &#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000011'>
+                <a name='M000011'></a>
+                <div class='synopsis'>
+                  <span class='name'>create_playlist</span>
+                  <span class='arguments'>(show_id, name, options = {})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Creates a manual playlist in the Episodic System in the specified show.
+                  </p>
+                  <p>
+                  The last parameter to this method is a list of optional attributes.
+                  Acceptable options are:
+                  </p>
+                  <pre>description - A string value to be used as the description for the playlist.&#x000A;    Descriptions must be less than 255 characters&#x000A;episode_ids - An array or list of comma separated valid episode ids in the order&#x000A;    they should appear in the playlist.&#x000A;behavior - Indicates what the player should do when an episode in the playlist finishes.&#x000A;    Valid values are '0' (display a list of other episodes in the playlist),&#x000A;    '1' (start playing the next episode immediately) or '2' (display the list&#x000A;    but start playing after 'auto_play_delay' seconds). The default is '0'.&#x000A;auto_play_delay - If the 'behavior' value is '2' then this is the number of seconds&#x000A;    to wait until the next episode is played. The default is 5.&#x000A;custom_fields - If you have set up custom metadata fields on the show that you are&#x000A;    creating the playlist in you can also assign values to those fields by passing&#x000A;    in a Hash of name/value pairs where the name is the name of your custom field.&#x000A;    In the case that the field you are trying to set is a external select field then&#x000A;    the value should be a Hash mapping ids to display values.&#x000A;upload_types - The caller may pass in a single value or a comma delimited list.  However,&#x000A;    it is important to note that your network must support the one of specified upload&#x000A;    types or the call will fail.  Currently, the only valid value is 's3'.&#x000A;video_filename - If an upload_type is specified this is the name of the file that will be&#x000A;    uploaded and made the single video for the episode.&#x000A;thumbnail_filename - If an upload_type is specified this is the name of the file that will&#x000A;    be uploaded and made the thumbnail for the episode.</pre>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">show_id<String>:</td><td>The ID of the show to create the playlist in.
+                  
+                  </td></tr>
+                  <tr><td valign="top">name<String>:</td><td>The name of the playlist. This must be unique across your show.
+                  
+                  </td></tr>
+                  <tr><td valign="top">options<Hash>:</td><td>A hash of optional attributes.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::WriteResponse:</td><td>The parsed response.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000011-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000011-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 153</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_playlist</span> <span class="ruby-identifier">show_id</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span> = {}&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Clone the options into our params hash</span>&#x000A;          <span class="ruby-identifier">params</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Add the required fields</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:show_id</span>] = <span class="ruby-identifier">show_id</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:name</span>] = <span class="ruby-identifier">name</span>&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_post</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;write&quot;</span>, <span class="ruby-value str">&quot;create_playlist&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000012'>
+                <a name='M000012'></a>
+                <div class='synopsis'>
+                  <span class='name'>update_episode</span>
+                  <span class='arguments'>(id, options = {})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Updates an episode in the Episodic System. This method will return the
+                  information needed to upload the video file for this episode. If you are
+                  adding a file to the episode then the <tt><a
+                  href="WriteMethods.html#M000014">upload_file_for_episode</a></tt> must be
+                  called immediately after this method. For example,
+                  </p>
+                  <pre>::Episodic::Platform::WriteMethods.update_episode(&quot;jz54h6q0i39y&quot;, {:upload_types =&gt; &quot;s3&quot;, :thumbnail_filename =&gt; &quot;my_thumb.jpg&quot;})&#x000A;::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath(&quot;/path/to/file/my_thumb.jpg&quot;))</pre>
+                  <p>
+                  The last parameter to this method is a list of optional attributes.
+                  Acceptable options are:
+                  </p>
+                  <pre>air_date - Setting this date in the future will tell the Episodic Platform to publish&#x000A;    the episode but not make it available in playlists until this date has passed.&#x000A;    This defaults to now if not provided.&#x000A;custom_fields- If you have set up custom metadata fields on the show that you are&#x000A;    creating the episode in you can also assign values to those fields by passing&#x000A;    in a Hash of name/value pairs where the name is the name of your custom field.&#x000A;    In the case that the field you are trying to set is a external select field then&#x000A;    the value should be a Hash mapping ids to display values.&#x000A;description - A string value to be used as the description for the episode.&#x000A;    Descriptions must be less than 255 characters&#x000A;off_air_date - When this date is reached the episode will be removed from all&#x000A;    playlists. This defaults to indefinite if not provided.&#x000A;publish_format_ids - Publishing resolutions and bitrates defaults are set on the&#x000A;    containing show but can be overridden on the episode.  If you wish to override the&#x000A;    defaults, this value should be an Array of publishing profile ids.&#x000A;tags - A comma delimitted list of tags for the new episode.&#x000A;upload_types - This is only used when there is a 'video_filename' and/or 'thumbnail_filename' included.&#x000A;    The caller may pass in a single value or a comma delimited list.  However, it is important to note that your&#x000A;    network must support the one of specified upload types or the call will fail.  Currently, the only valid value&#x000A;    is 's3'.&#x000A;thumbnail_id - The id of the thumbnail to set on the episode.  Ignored if the upload_types and thumbnail_filename parameters&#x000A;    are not blank.&#x000A;video_filename - If an upload_type is specified this is the name of the file that will be uploaded and made the single video for&#x000A;    the episode.&#x000A;thumbnail_filename - If an upload_type is specified this is the name of the file that will be uploaded and made the thumbnail&#x000A;    for the episode.</pre>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">id<String>:</td><td>The ID of the episode to update.
+                  
+                  </td></tr>
+                  <tr><td valign="top">options<Hash>:</td><td>A hash of optional attributes.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::CreateUpdateEpisodeResponse:</td><td>An object that contains the XML response as well as some
+                  
+                  </td></tr>
+                  </table>
+                  <pre>helper methods including &lt;tt&gt;upload_for_filepath&lt;/tt&gt; to be used when calling&#x000A;&lt;tt&gt;Episodic::Platform::WriteMethods.upload_file_for_episode&lt;/tt&gt;.</pre>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000012-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000012-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 216</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update_episode</span>(<span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span> = {})&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Clone the options into our params hash</span>&#x000A;          <span class="ruby-identifier">params</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Add the required fields</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>] = <span class="ruby-identifier">id</span>&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_post</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;write&quot;</span>, <span class="ruby-value str">&quot;update_episode&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">CreateUpdateEpisodeResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)&#x000A;          &#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000013'>
+                <a name='M000013'></a>
+                <div class='synopsis'>
+                  <span class='name'>update_playlist</span>
+                  <span class='arguments'>(id, options = {})</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Updates a manual playlist in the Episodic System with the specified ID.
+                  </p>
+                  <p>
+                  The last parameter to this method is a list of optional attributes.
+                  Acceptable options are:
+                  </p>
+                  <pre>name - The name of the playlist. his must be unique across your show.&#x000A;description - A string value to be used as the description for the playlist.&#x000A;    Descriptions must be less than 255 characters&#x000A;episode_ids - An array or list of comma separated valid episode ids in the order&#x000A;    they should appear in the playlist.&#x000A;replace_episodes - Indicates if the existing episodes should be replaced by the new&#x000A;    ones or added to. The default is 'false'.&#x000A;behavior - Indicates what the player should do when an episode in the playlist finishes.&#x000A;    Valid values are '0' (display a list of other episodes in the playlist),&#x000A;    '1' (start playing the next episode immediately) or '2' (display the list&#x000A;    but start playing after 'auto_play_delay' seconds). The default is '0'.&#x000A;auto_play_delay - If the 'behavior' value is '2' then this is the number of seconds&#x000A;    to wait until the next episode is played. The default is 5.&#x000A;custom_fields - If you have set up custom metadata fields on the show that you are&#x000A;    creating the playlist in you can also assign values to those fields by passing&#x000A;    in a Hash of name/value pairs where the name is the name of your custom field.&#x000A;    In the case that the field you are trying to set is a external select field then&#x000A;    the value should be a Hash mapping ids to display values.</pre>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">id<String>:</td><td>The ID of the playlist to update.
+                  
+                  </td></tr>
+                  <tr><td valign="top">options<Hash>:</td><td>A hash of optional attributes.
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Episodic::Platform::WriteResponse:</td><td>The parsed response.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000013-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000013-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 263</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update_playlist</span> <span class="ruby-identifier">id</span>, <span class="ruby-identifier">options</span> = {}&#x000A;          <span class="ruby-comment cmt"># Clone the options into our params hash</span>&#x000A;          <span class="ruby-identifier">params</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">clone</span>&#x000A;          &#x000A;          <span class="ruby-comment cmt"># Add the required fields</span>&#x000A;          <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>] = <span class="ruby-identifier">id</span>&#x000A;          &#x000A;          <span class="ruby-identifier">response</span> = <span class="ruby-identifier">connection</span>.<span class="ruby-identifier">do_post</span>(<span class="ruby-identifier">construct_url</span>(<span class="ruby-value str">&quot;write&quot;</span>, <span class="ruby-value str">&quot;update_playlist&quot;</span>), <span class="ruby-identifier">params</span>)&#x000A;          &#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">WriteResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)          &#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <div class='method public-class' id='method-M000014'>
+                <a name='M000014'></a>
+                <div class='synopsis'>
+                  <span class='name'>upload_file_for_episode</span>
+                  <span class='arguments'>(pending_upload)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Uploads the video and/or images to the Episodic System. This method
+                  requires that you first called <tt><a
+                  href="WriteMethods.html#M000010">create_episode</a></tt> or <tt><a
+                  href="WriteMethods.html#M000012">update_episode</a></tt> since the second
+                  parameter passed to this method is returned from one of those method calls.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">pending_upload<Hash>:</td><td>This is the result of the call to <tt>upload_for_filepath</tt>
+                  
+                  </td></tr>
+                  </table>
+                  <pre>on the object returned from &lt;tt&gt;create_episode&lt;/tt&gt; or &lt;tt&gt;update_episode_video&lt;/tt&gt;.</pre>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">Boolean:</td><td><tt>true</tt> if the upload was successful. Otherwise, this will raise an
+                  exception
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000014-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000014-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 289</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">upload_file_for_episode</span>(<span class="ruby-identifier">pending_upload</span>)&#x000A;          &#x000A;          <span class="ruby-identifier">c</span> = <span class="ruby-constant">Curl</span><span class="ruby-operator">::</span><span class="ruby-constant">Easy</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">pending_upload</span>[<span class="ruby-identifier">:upload</span>].<span class="ruby-identifier">url</span>)  &#x000A;          <span class="ruby-identifier">c</span>.<span class="ruby-identifier">multipart_form_post</span> = <span class="ruby-keyword kw">true</span>&#x000A;          &#x000A;          <span class="ruby-identifier">fields</span> = []&#x000A;          <span class="ruby-identifier">pending_upload</span>[<span class="ruby-identifier">:upload</span>].<span class="ruby-identifier">params</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>&#x000A;            <span class="ruby-identifier">fields</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Curl</span><span class="ruby-operator">::</span><span class="ruby-constant">PostField</span>.<span class="ruby-identifier">content</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;          &#x000A;          <span class="ruby-identifier">fields</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Curl</span><span class="ruby-operator">::</span><span class="ruby-constant">PostField</span>.<span class="ruby-identifier">file</span>(<span class="ruby-value str">&quot;file&quot;</span>, <span class="ruby-identifier">pending_upload</span>[<span class="ruby-identifier">:filepath</span>])&#x000A;          &#x000A;          <span class="ruby-keyword kw">begin</span>&#x000A;            <span class="ruby-identifier">c</span>.<span class="ruby-identifier">http_post</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">fields</span>)&#x000A;            <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">FileUploadFailed</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Status #{c.response_code} returned from file upload request&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">response_code</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">399</span>&#x000A;            <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>&#x000A;          <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Curl</span><span class="ruby-operator">::</span><span class="ruby-constant">Err</span><span class="ruby-operator">::</span><span class="ruby-constant">CurlError</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>&#x000A;            <span class="ruby-identifier">raise</span> <span class="ruby-operator">::</span><span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">FileUploadFailed</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>)&#x000A;          <span class="ruby-keyword kw">end</span>&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+              <h2>Protected class methods</h2>
+              <div class='method protected-class' id='method-M000015'>
+                <a name='M000015'></a>
+                <div class='synopsis'>
+                  <span class='name'>parse_create_response</span>
+                  <span class='arguments'>(response)</span>
+                </div>
+                <div class='description'>
+                  <p>
+                  Method factored out to make unit testing easier. This method simply creates
+                  the <tt>::Episodic::Platform::WriteResponse</tt> object.
+                  </p>
+                  <h4>Parameters</h4>
+                  <table>
+                  <tr><td valign="top">response<Episodic::Platform::HTTPResponse>:</td><td>The response from any create request (i.e. <a
+                  href="WriteMethods.html#M000010">create_episode</a>, <a
+                  href="WriteMethods.html#M000011">create_playlist</a>, etc)
+                  
+                  </td></tr>
+                  </table>
+                  <h4>Returns</h4>
+                  <table>
+                  <tr><td valign="top">::Episodic::Platform::WriteResponse:</td><td>The parsed response.
+                  
+                  </td></tr>
+                  </table>
+                </div>
+                <div class='source'>
+                  <a class='source-toggle' href='#' onclick="toggleCode('M000015-source'); return false">
+                    [show source]
+                  </a>
+                  <pre id='M000015-source'><span class="ruby-comment cmt"># File lib/episodic/platform/write_methods.rb, line 324</span>&#x000A;        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_create_response</span> <span class="ruby-identifier">response</span>&#x000A;          <span class="ruby-keyword kw">return</span> <span class="ruby-operator">::</span><span class="ruby-constant">Episodic</span><span class="ruby-operator">::</span><span class="ruby-constant">Platform</span><span class="ruby-operator">::</span><span class="ruby-constant">EpisodesResponse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">response</span>)&#x000A;        <span class="ruby-keyword kw">end</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='footer-push'></div>
+    </div>
+    <div id='footer'>
+      <a href="http://github.com/mislav/hanna/tree/master"><strong>Hanna</strong> RDoc template</a>
+    </div>
+  </body>
+</html>
