@@ -11,15 +11,19 @@ For more information about Episodic's Platform API see {http://app.episodic.com/
 Rdocs are located at {http://episodic.github.com/episodic-platform-ruby/doc/index.html}[http://episodic.github.com/episodic-platform-ruby/doc/index.html]
 
 == GETTING STARTED:
-  
+
+Install the episodic-platform gem
+
+    gem install episodic-platform
+      
 To get started you need to require 'episodic/platform':
 
-  require 'episodic/platform'
+    require 'episodic/platform'
 	 
 Before you can use any of the object methods, you need to create a connection using <tt>Base.establish_connection!</tt>. The 
 <tt>Base.establish_connection!</tt> method requires that you pass your Episodic API Key and Episodic Secret Key.
   
-  Episodic::Platform::Base.establish_connection!('my_api_key', 'my_secret_key')
+    Episodic::Platform::Base.establish_connection!('my_api_key', 'my_secret_key')
 
 After establishing a connection you can call any of the methods in the <tt>Episodic::Platform::QueryMehtods</tt>, <tt>Episodic::Platform::WriteMehtods</tt>
 or <tt>Episodic::Platform::AnaylticsMehtods</tt>. Generally these methods will return some subclass of <tt>Episodic::Platform::Response</tt> which
@@ -29,36 +33,36 @@ contains the parsed response. However, you can also access the XML response body
 
 To query for a list of episodes:
 
-  response = Episodic::Platform::QueryMethods.episodes({:show_id => "12345678", search_term => "fun", :status => "on_the_air", :sort_by => "air_date"})
+    response = Episodic::Platform::QueryMethods.episodes({:show_id => "12345678", search_term => "fun", :status => "on_the_air", :sort_by => "air_date"})
   
-  puts "There are a total of #{response.total} episodes matching the query"
+    puts "There are a total of #{response.total} episodes matching the query"
   
-  # For each episode display the episode's name and embed code for the default player.
-  response.episodes.each do |episode|
-    puts episode.name
-    default_player = episode.players.detect {|p| p.default}
-    puts default_player.embed_code
-  end
+    # For each episode display the episode's name and embed code for the default player.
+    response.episodes.each do |episode|
+        puts episode.name
+        default_player = episode.players.detect {|p| p.default}
+        puts default_player.embed_code
+    end
 
 To create a new episode:
   
-  # Create the episode and tell Episodic about the video file and thumbnail file to use
-  response = ::Episodic::Platform::WriteMethods.create_episode("oz04s1q0i29t", "My Episode", {:air_date => Time.now + 1.week, :upload_types => "s3", :video_filename => "my_video.mp4", :thumbnail_filename => "my_thumb.png"})
+    # Create the episode and tell Episodic about the video file and thumbnail file to use
+    response = ::Episodic::Platform::WriteMethods.create_episode("oz04s1q0i29t", "My Episode", {:air_date => Time.now + 1.week, :upload_types => "s3", :video_filename => "my_video.mp4", :thumbnail_filename => "my_thumb.png"})
   
-  # Now upload the video and thumbnail.  It is best to upload the thumbnail first since it is usually smaller.
-  ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_thumb.png"))
-  ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_video.mp4"))
+    # Now upload the video and thumbnail.  It is best to upload the thumbnail first since it is usually smaller.
+    ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_thumb.png"))
+    ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_video.mp4"))
   
 == HANDLING ERRORS:
   
 Any errors returned from the Episodic Platform API are converted to exceptions and raised from the called method. For example,
 the following response would cause <tt>Episodic::Platform::InvalidAPIKey</tt> to be raised.
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <error>
-    <code>1</code>
-    <message>Invalid API Key</message>
-  </error>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <error>
+        <code>1</code>
+        <message>Invalid API Key</message>
+    </error>
 
 == LICENSE:
 
