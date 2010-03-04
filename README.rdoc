@@ -1,0 +1,86 @@
+= episodic-platform
+
+* http://github.com/episodic/episodic-platform-ruby
+
+== DESCRIPTION:
+
+Ruby client library for Episodic's Platform REST API (http://app.episodic.com/help/server_api)
+
+For more information about Episodic's Platform API see [http://app.episodic.com/help/server_api](http://app.episodic.com/help/server_api)
+
+Rdocs are located at [http://episodic.github.com/episodic-platform-ruby/doc/index.html](http://episodic.github.com/episodic-platform-ruby/doc/index.html)
+
+== GETTING STARTED:
+  
+To get started you need to require 'episodic/platform':
+
+  require 'episodic/platform'
+	 
+Before you can use any of the object methods, you need to create a connection using <tt>Base.establish_connection!</tt>. The 
+<tt>Base.establish_connection!</tt> method requires that you pass your Episodic API Key and Episodic Secret Key.
+  
+  Episodic::Platform::Base.establish_connection!('my_api_key', 'my_secret_key')
+
+After establishing a connection you can call any of the methods in the <tt>Episodic::Platform::QueryMehtods</tt>, <tt>Episodic::Platform::WriteMehtods</tt>
+or <tt>Episodic::Platform::AnaylticsMehtods</tt>. Generally these methods will return some subclass of <tt>Episodic::Platform::Response</tt> which
+contains the parsed response. However, you can also access the XML response body directly by calling <tt>response.xml</tt>.
+
+== SAMPLE USAGE:
+
+To query for a list of episodes:
+
+  response = Episodic::Platform::QueryMethods.episodes({:show_id => "12345678", search_term => "fun", :status => "on_the_air", :sort_by => "air_date"})
+  
+  puts "There are a total of #{response.total} episodes matching the query"
+  
+  # For each episode display the episode's name and embed code for the default player.
+  response.episodes.each do |episode|
+    puts episode.name
+    default_player = episode.players.detect {|p| p.default}
+    puts default_player.embed_code
+  end
+
+To create a new episode:
+  
+  # Create the episode and tell Episodic about the video file and thumbnail file to use
+  response = ::Episodic::Platform::WriteMethods.create_episode("oz04s1q0i29t", "My Episode", {:air_date => Time.now + 1.week, :upload_types => "s3", :video_filename => "my_video.mp4", :thumbnail_filename => "my_thumb.png"})
+  
+  # Now upload the video and thumbnail.  It is best to upload the thumbnail first since it is usually smaller.
+  ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_thumb.png"))
+  ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_video.mp4"))
+  
+== HANDLING ERRORS:
+  
+Any errors returned from the Episodic Platform API are converted to exceptions and raised from the called method. For example,
+the following response would cause <tt>Episodic::Platform::InvalidAPIKey</tt> to be raised.
+
+  <?xml version="1.0" encoding="UTF-8"?>
+  <error>
+    <code>1</code>
+    <message>Invalid API Key</message>
+  </error>
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2010 Episodic, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlists per_page="20" page="1" pages="1" total="17">
+  <playlist>
+    <id>oo3my8ozcnb5</id>
+    <name>Recent Episodes</name>
+    <description>Most recent episodes in the 'Second show' show.</description>
+    <created_at>2010-01-06 02:18:38</created_at>
+    <custom_fields>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Foo3my8ozcnb5%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Foo3my8ozcnb5%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Foo3my8ozcnb5%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/oo3my8ozcnb5/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>ootudbh0gdfl</id>
+    <name>test1</name>
+    <description></description>
+    <created_at>2010-01-07 21:20:37</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>oz049unr3jep</id>
+      </episode>
+      <episode position="2">
+        <id>oyzvunkrzv9d</id>
+      </episode>
+      <episode position="3">
+        <id>ownfdcczim81</id>
+      </episode>
+      <episode position="4">
+        <id>oujbx2g8ufwh</id>
+      </episode>
+      <episode position="5">
+        <id>oo3n83ujmupt</id>
+      </episode>
+      <episode position="6">
+        <id>oo3kyjwjzcap</id>
+      </episode>
+      <episode position="7">
+        <id>oo3krbgh3ta9</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Footudbh0gdfl%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Footudbh0gdfl%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Footudbh0gdfl%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/ootudbh0gdfl/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>opanpzu2mfwh</id>
+    <name>test2</name>
+    <description></description>
+    <created_at>2010-01-09 00:57:22</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+        <value>
+          <![CDATA[monkey]]>
+        </value>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>oz049unr3jep</id>
+      </episode>
+      <episode position="2">
+        <id>oyzvunkrzv9d</id>
+      </episode>
+      <episode position="3">
+        <id>ownfdcczim81</id>
+      </episode>
+      <episode position="4">
+        <id>oujbx2g8ufwh</id>
+      </episode>
+      <episode position="5">
+        <id>oo3n83ujmupt</id>
+      </episode>
+      <episode position="6">
+        <id>oo3kyjwjzcap</id>
+      </episode>
+      <episode position="7">
+        <id>oo3krbgh3ta9</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fopanpzu2mfwh%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fopanpzu2mfwh%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fopanpzu2mfwh%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/opanpzu2mfwh/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p0ikspbp9rep</id>
+    <name>Recent Episodes</name>
+    <description>Most recent episodes in the 'Third show' show.</description>
+    <created_at>2010-02-05 16:13:55</created_at>
+    <custom_fields>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp0ikspbp9rep%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp0ikspbp9rep%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp0ikspbp9rep%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p0ikspbp9rep/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p0il05nwlcsh</id>
+    <name>Recent Episodes</name>
+    <description>Most recent episodes in the 'Fourth show' show.</description>
+    <created_at>2010-02-05 16:14:29</created_at>
+    <custom_fields>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp0il05nwlcsh%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp0il05nwlcsh%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp0il05nwlcsh%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p0il05nwlcsh/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31g3z1llbsx</id>
+    <name>My Manual Playlist 1265923612</name>
+    <description></description>
+    <created_at>2010-02-11 21:26:58</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31g3z1llbsx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31g3z1llbsx%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31g3z1llbsx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31g3z1llbsx/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31g8ks71zb5</id>
+    <name>My Manual Playlist 1265923634</name>
+    <description></description>
+    <created_at>2010-02-11 21:27:19</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31g8ks71zb5%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31g8ks71zb5%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31g8ks71zb5%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31g8ks71zb5/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31ge23abif5</id>
+    <name>My Manual Playlist 1265923659</name>
+    <description></description>
+    <created_at>2010-02-11 21:27:44</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31ge23abif5%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31ge23abif5%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31ge23abif5%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31ge23abif5/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31hbtibpdkx</id>
+    <name>My Manual Playlist 1265923813</name>
+    <description></description>
+    <created_at>2010-02-11 21:30:18</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hbtibpdkx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hbtibpdkx%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hbtibpdkx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31hbtibpdkx/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31hlgrrj20x</id>
+    <name>My Manual Playlist 1265923858</name>
+    <description></description>
+    <created_at>2010-02-11 21:31:02</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hlgrrj20x%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hlgrrj20x%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hlgrrj20x%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31hlgrrj20x/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31hsp7uebk1</id>
+    <name>My Manual Playlist 1265923890</name>
+    <description></description>
+    <created_at>2010-02-11 21:31:35</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hsp7uebk1%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hsp7uebk1%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hsp7uebk1%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31hsp7uebk1/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p31hxiukb669</id>
+    <name>My Manual Playlist 1265923912</name>
+    <description></description>
+    <created_at>2010-02-11 21:31:57</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 22:42:00]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+      </field>
+    </custom_fields>
+    <episodes>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hxiukb669%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hxiukb669%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp31hxiukb669%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p31hxiukb669/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p32khwxhm6m9</id>
+    <name>My Manual Playlist 1265933465</name>
+    <description></description>
+    <created_at>2010-02-11 23:17:30</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+        <value>
+          <![CDATA[bar]]>
+        </value>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 23:17:28]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+        <value id="id1">
+          <![CDATA[val1]]>
+        </value>
+        <value id="id2">
+          <![CDATA[val2]]>
+        </value>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>ozv6spajltkx</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32khwxhm6m9%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32khwxhm6m9%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32khwxhm6m9%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p32khwxhm6m9/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p32r9x332nsx</id>
+    <name>My Manual Playlist 1265931362</name>
+    <description></description>
+    <created_at>2010-02-11 23:36:03</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+        <value>
+          <![CDATA[foo]]>
+        </value>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 23:36:02]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+        <value id="id1">
+          <![CDATA[val1]]>
+        </value>
+        <value id="id2">
+          <![CDATA[val2]]>
+        </value>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>oz049unr3jep</id>
+      </episode>
+      <episode position="2">
+        <id>ozv6spajltkx</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32r9x332nsx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32r9x332nsx%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32r9x332nsx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p32r9x332nsx/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p32w5qq8euwx</id>
+    <name>My Manual Playlist 1265932162</name>
+    <description></description>
+    <created_at>2010-02-11 23:49:25</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+        <value>
+          <![CDATA[foo]]>
+        </value>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 23:49:22]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+        <value id="id1">
+          <![CDATA[val1]]>
+        </value>
+        <value id="id2">
+          <![CDATA[val2]]>
+        </value>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>oz049unr3jep</id>
+      </episode>
+      <episode position="2">
+        <id>ozv6spajltkx</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32w5qq8euwx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32w5qq8euwx%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32w5qq8euwx%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p32w5qq8euwx/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p32zkqbl6135</id>
+    <name>My Manual Playlist 1265932723</name>
+    <description></description>
+    <created_at>2010-02-11 23:58:46</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+        <value>
+          <![CDATA[foo]]>
+        </value>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-11 23:58:43]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+        <value id="id1">
+          <![CDATA[val1]]>
+        </value>
+        <value id="id2">
+          <![CDATA[val2]]>
+        </value>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>oz049unr3jep</id>
+      </episode>
+      <episode position="2">
+        <id>ozv6spajltkx</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32zkqbl6135%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32zkqbl6135%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp32zkqbl6135%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p32zkqbl6135/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+  <playlist>
+    <id>p332qy7zwf7l</id>
+    <name>My Manual Playlist 1265933243</name>
+    <description></description>
+    <created_at>2010-02-12 00:07:27</created_at>
+    <custom_fields>
+      <field position="1" type="text" required="false">
+        <name>text field</name>
+        <value>
+          <![CDATA[foo]]>
+        </value>
+      </field>
+      <field position="2" type="date" required="false">
+        <name>date field</name>
+        <value>
+          <![CDATA[2010-02-12 00:07:23]]>
+        </value>
+      </field>
+      <field position="3" type="external_select" required="false">
+        <name>External Select Field</name>
+        <value id="id1">
+          <![CDATA[val1]]>
+        </value>
+        <value id="id2">
+          <![CDATA[val2]]>
+        </value>
+      </field>
+    </custom_fields>
+    <episodes>
+      <episode position="1">
+        <id>oz049unr3jep</id>
+      </episode>
+      <episode position="2">
+        <id>ozv6spajltkx</id>
+      </episode>
+    </episodes>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp332qy7zwf7l%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp332qy7zwf7l%2Fplaylist.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F6%2Fplaylists%2Fp332qy7zwf7l%2Fplaylist.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/6/playlists/p332qy7zwf7l/playlist.xml</config>
+      </player>
+    </players>
+  </playlist>
+</playlists>

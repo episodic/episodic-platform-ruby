@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shows per_page="20" page="1" pages="1" total="2">
+  <show>
+    <id>89675</id>
+    <name>My show</name>
+    <description>My description</description>
+    <page_url></page_url>
+    <itunes_url></itunes_url>
+    <thumbnails>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Flatest%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Flatest%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Flatest%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/latest/config.xml</config>
+      </player>
+    </players>
+  </show>
+  <show>
+    <id>adfadsfasdf</id>
+    <error>
+      <code>6</code>
+      <message>Show not found</message>
+    </error>
+  </show>
+</shows>

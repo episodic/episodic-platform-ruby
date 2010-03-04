@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<episodes per_page="20" page="1" pages="1" total="14">
+  <episode>
+    <id>oo3krbgh3ta9</id>
+    <name>Episode 1</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-01-06 02:12:39</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:05</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a40.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a40.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a40.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foo3krbgh3ta9%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foo3krbgh3ta9%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foo3krbgh3ta9%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/oo3krbgh3ta9/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>oo3kyjwjzcap</id>
+    <name>Episode 2</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-01-06 02:13:12</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:28</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+      <field required="false" position="1" type="text">
+        <name>Series Name</name>
+        <value>
+          <![CDATA[Game Trailers]]>
+        </value>
+      </field>
+      <field required="true" position="2" type="number">
+        <name>Number Field</name>
+        <value>
+          <![CDATA[567]]>
+        </value>
+      </field>
+      <field required="false" position="3" type="date">
+        <name>Publish Date</name>
+        <value>
+          <![CDATA[2010-01-29 18:51:00]]>
+        </value>
+      </field>
+      <field required="false" position="4" type="external_select">
+        <name>Category</name>
+        <value id="123">
+          <![CDATA[Drama]]>
+        </value>
+        <value id="234">
+          <![CDATA[Comedy]]>
+        </value>
+      </field>
+    </custom_fields>
+    <playlists>
+      <playlist position="1">
+        <id>oo3my8ozcnb5</id>
+      </playlist>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a38.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a38.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a38.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foo3kyjwjzcap%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foo3kyjwjzcap%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foo3kyjwjzcap%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/oo3kyjwjzcap/config.xml</config>
+      </player>
+    </players>
+	<downloads>
+      <download width="480" height="360">
+        <url>http://localhost/cdn/development/randysimon/assets/480/a38.mp4</url>
+      </download>
+    </downloads>
+  </episode>
+  <episode>
+    <id>oo3n83ujmupt</id>
+    <name>Episode 12</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-01-06 02:19:23</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:03</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+      <playlist position="1">
+        <id>oo3my8ozcnb5</id>
+      </playlist>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a41.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a41.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a41.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2Foo3my0suwfep%2Foo3n83ujmupt%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2Foo3my0suwfep%2Foo3n83ujmupt%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2Foo3my0suwfep%2Foo3n83ujmupt%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/oo3my0suwfep/oo3n83ujmupt/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>oujbx2g8ufwh</id>
+    <name>my episode 1264113987</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-01-21 22:46:46</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:03</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a41.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a41.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a41.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foujbx2g8ufwh%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foujbx2g8ufwh%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foujbx2g8ufwh%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/oujbx2g8ufwh/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>owjxerjw7nr5</id>
+    <name>Episode 6</name>
+    <description></description>
+    <tags></tags>
+    <air_date></air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:30</duration>
+    <status>off_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a39.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a39.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a39.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxerjw7nr5%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxerjw7nr5%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxerjw7nr5%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/owjxerjw7nr5/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>owjxlcblqj29</id>
+    <name>Episode 7</name>
+    <description></description>
+    <tags></tags>
+    <air_date></air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:28</duration>
+    <status>off_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a38.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a38.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a38.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxlcblqj29%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxlcblqj29%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxlcblqj29%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/owjxlcblqj29/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>owjxskrom4g1</id>
+    <name>Episode 8</name>
+    <description></description>
+    <tags></tags>
+    <air_date></air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:03</duration>
+    <status>off_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a41.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a41.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a41.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxskrom4g1%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxskrom4g1%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fowjxskrom4g1%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/owjxskrom4g1/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>ownfdcczim81</id>
+    <name>Episode with ad slot</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-01-27 03:43:57</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:02</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a42.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a42.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a42.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fownfdcczim81%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fownfdcczim81%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fownfdcczim81%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/ownfdcczim81/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>oyzvunkrzv9d</id>
+    <name>my episode 1265063113</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-02-01 22:25:22</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:00</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a45.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a45.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a45.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foyzvunkrzv9d%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foyzvunkrzv9d%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foyzvunkrzv9d%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/oyzvunkrzv9d/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>oyzwdq7j708x</id>
+    <name>my episode 1265063151</name>
+    <description></description>
+    <tags></tags>
+    <air_date></air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:00</duration>
+    <status>off_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a46.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a46.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a46.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foyzwdq7j708x%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foyzwdq7j708x%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foyzwdq7j708x%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/oyzwdq7j708x/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>oz049unr3jep</id>
+    <name>my episode 1265063688</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-02-01 22:48:18</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:00</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a47.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a47.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a47.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foz049unr3jep%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foz049unr3jep%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Foz049unr3jep%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/oz049unr3jep/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>ozv6puoxqy2p</id>
+    <name>bmwpostroll.mov</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-02-09 00:29:35</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:28</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a70.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a70.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a70.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fozv6puoxqy2p%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fozv6puoxqy2p%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fozv6puoxqy2p%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/ozv6puoxqy2p/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>ozv6spajltkx</id>
+    <name>bmwpreroll.mov</name>
+    <description></description>
+    <tags></tags>
+    <air_date>2010-02-09 00:29:36</air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:06</duration>
+    <status>on_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a71.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a71.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a71.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fozv6spajltkx%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fozv6spajltkx%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2F5%2Fozv6spajltkx%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/5/ozv6spajltkx/config.xml</config>
+      </player>
+    </players>
+  </episode>
+  <episode>
+    <id>p0il62r8rda9</id>
+    <name>saturnpostroll.mov</name>
+    <description></description>
+    <tags></tags>
+    <air_date></air_date>
+    <off_air_date></off_air_date>
+    <duration>00:00:30</duration>
+    <status>off_the_air</status>
+    <custom_fields>
+    </custom_fields>
+    <playlists>
+      <playlist position="1">
+        <id>p0il05nwlcsh</id>
+      </playlist>
+    </playlists>
+    <thumbnails>
+      <thumbnail width="100" height="1">http://localhost/cdn/development/randysimon/assets/207/a72.jpg</thumbnail>
+      <thumbnail width="" height="360">http://localhost/cdn/development/randysimon/assets/360/a72.jpg</thumbnail>
+      <thumbnail width="" height="480">http://localhost/cdn/development/randysimon/assets/480/a72.jpg</thumbnail>
+    </thumbnails>
+    <players width="640" height="360">
+      <player default="true" width="640" height="391">
+        <name>Default Player</name>
+        <embed_code>&lt;object id=&quot;ep_player&quot; name=&quot;ep_player&quot; height=&quot;391&quot; width=&quot;640&quot; data=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2Fp0il05nwlcsh%2Fp0il62r8rda9%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2Fp0il05nwlcsh%2Fp0il62r8rda9%2Fconfig.xml&quot;/&gt;&lt;param name=&quot;AllowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;param name=&quot;allowfullscreen&quot; value=&quot;true&quot;/&gt;&lt;embed src=&quot;http://cdn.episodic.com/player_development/EpisodicPlayer.swf?config=http%3A%2F%2Flocalhost%2Fcdn%2Fdevelopment%2Frandysimon%2Fp0il05nwlcsh%2Fp0il62r8rda9%2Fconfig.xml&quot; type=&quot;application/x-shockwave-flash&quot; allowfullscreen=&quot;true&quot; AllowScriptAccess=&quot;always&quot; width=&quot;640&quot; height=&quot;391&quot; id=&quot;ep_player&quot; name=&quot;ep_player&quot;/&gt;&lt;/object&gt;</embed_code>
+        <config>http://localhost/cdn/development/randysimon/p0il05nwlcsh/p0il62r8rda9/config.xml</config>
+      </player>
+    </players>
+  </episode>
+</episodes>

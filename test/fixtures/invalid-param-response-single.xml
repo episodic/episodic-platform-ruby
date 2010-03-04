@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<error>
+  <code>4</code>
+  <message>One or more parameters were invalid</message>
+  <invalid_parameters>
+    <invalid_parameter name="extensible_metadata_field_values_date_value">can't be blank</invalid_parameter>
+    <invalid_parameter name="name">can't be blank</invalid_parameter>
+  </invalid_parameters>
+</error>

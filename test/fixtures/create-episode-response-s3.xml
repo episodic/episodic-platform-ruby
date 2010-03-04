@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<create_episode_response result="success" episode_id="p3h7kldgjg1t">
+  <upload url="http://randy.dev.assets.episodic.com.s3.amazonaws.com/" filename="1-0.mp4">
+    <param value="/oz04l1622vwh/oz04s1q0i29t/20100212/89-0-232000.mp4" name="key"/>
+    <param value="1ZAV2R8EFHVZRJS9TEG2" name="AWSAccessKeyId"/>
+    <param value="public-read" name="acl"/>
+    <param value="eyJleHBpcmF0aW9uIjogIjIwMTAtMDItMTJUMjM6MjM6MDFaIiwgImNvbmRp
+dGlvbnMiOiBbeyJidWNrZXQiOiAicmFuZHkuZGV2LmFzc2V0cy5lcGlzb2Rp
+Yy5jb20ifSwgeyJrZXkiOiAiL296MDRsMTYyMnZ3aC9vejA0czFxMGkyOXQv
+MjAxMDAyMTIvODktMC0yMzIwMDAubXA0In0sIHsiYWNsIjogInB1YmxpYy1y
+ZWFkIn1dfQ==
+" name="policy"/>
+    <param value="cj5mRDbo+yFWOgfin+PDJ1JcjpU=" name="signature"/>
+  </upload>
+</create_episode_response>
