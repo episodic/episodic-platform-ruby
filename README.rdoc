@@ -6,9 +6,9 @@
 
 Ruby client library for Episodic's Platform REST API
 
-For more information about Episodic's Platform API see [http://app.episodic.com/help/server_api](http://app.episodic.com/help/server_api)
+For more information about Episodic's Platform API see {http://app.episodic.com/help/server_api}[http://app.episodic.com/help/server_api]
 
-Rdocs are located at [http://episodic.github.com/episodic-platform-ruby/doc/index.html](http://episodic.github.com/episodic-platform-ruby/doc/index.html)
+Rdocs are located at {http://episodic.github.com/episodic-platform-ruby/doc/index.html}[http://episodic.github.com/episodic-platform-ruby/doc/index.html]
 
 == GETTING STARTED:
   
