@@ -4,7 +4,7 @@
 
 == DESCRIPTION:
 
-Ruby client library for Episodic's Platform REST API (http://app.episodic.com/help/server_api)
+Ruby client library for Episodic's Platform REST API
 
 For more information about Episodic's Platform API see [http://app.episodic.com/help/server_api](http://app.episodic.com/help/server_api)
 
