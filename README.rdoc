@@ -1,4 +1,4 @@
-= episodic-platform
+= Episodic Platform SDK for Ruby
 
 * http://github.com/episodic/episodic-platform-ruby
 
