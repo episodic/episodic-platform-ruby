@@ -16,6 +16,14 @@ Install the episodic-platform gem
 
     gem install episodic-platform
       
+The Episodic Platform SDK has some dependencies. You will need to install these gems also.
+
+* `curb` - v0.6.2.1 {http://curb.rubyforge.org/}[http://curb.rubyforge.org/]
+* `xml-simple` - v1.0.12 {http://xml-simple.rubyforge.org/}[http://xml-simple.rubyforge.org/]
+* `hanna` - v0.1.2 {http://github.com/mislav/hanna}[http://github.com/mislav/hanna]
+
+== SAMPLE USAGE:
+
 To get started you need to require 'episodic/platform':
 
     require 'episodic/platform'
@@ -28,8 +36,6 @@ Before you can use any of the object methods, you need to create a connection us
 After establishing a connection you can call any of the methods in the <tt>Episodic::Platform::QueryMehtods</tt>, <tt>Episodic::Platform::WriteMehtods</tt>
 or <tt>Episodic::Platform::AnaylticsMehtods</tt>. Generally these methods will return some subclass of <tt>Episodic::Platform::Response</tt> which
 contains the parsed response. However, you can also access the XML response body directly by calling <tt>response.xml</tt>.
-
-== SAMPLE USAGE:
 
 To query for a list of episodes:
 
@@ -50,8 +56,8 @@ To create a new episode:
     response = ::Episodic::Platform::WriteMethods.create_episode("oz04s1q0i29t", "My Episode", {:air_date => Time.now + 1.week, :upload_types => "s3", :video_filename => "my_video.mp4", :thumbnail_filename => "my_thumb.png"})
   
     # Now upload the video and thumbnail.  It is best to upload the thumbnail first since it is usually smaller.
-    ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_thumb.png"))
-    ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/viceos/my_video.mp4"))
+    ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/videos/my_thumb.png"))
+    ::Episodic::Platform::WriteMethods.upload_file_for_episode(response.upload_for_filepath("/home/videos/my_video.mp4"))
   
 == HANDLING ERRORS:
   
