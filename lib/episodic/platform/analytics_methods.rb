@@ -42,7 +42,7 @@ module Episodic #:nodoc:
         # show_id<String>:: The id of the show that contains your episodes.  To get a list of your 
         #    shows see <tt>Episodic::Platform::QueryMethods.show</tt>. 
         # date_range<String>:: Specifies period of your report. The value of this parameter must be one 
-        #    of 'today', 'last_seven', 'last_thirty'.
+        #    of 'today', 'last_seven', 'last_thirty', 'all_time'.
         # date_grouping<String>:: Must be one of 'daily' or 'aggregate' to list the data by day or just a total 
         #    for the entire period respectively.
         # format<String>:: The format parameter is required and must be one of 'csv' or 'xml'.
